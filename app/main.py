@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routers import addition,subtraction,multiplication
+from app.routers import addition,subtraction,multiplication,division
 
 
 app = FastAPI(
@@ -10,7 +10,8 @@ app = FastAPI(
 
 app.include_router(addition.router)
 app.include_router(subtraction.router)
-app.include_router(multiplication.router)   
+app.include_router(multiplication.router)
+app.include_router(division.router)    
 
 
 @app.get("/")
